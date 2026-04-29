@@ -2,14 +2,17 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 Route::middleware(['auth'])->get('/', function () {
     return view('welcome');
 })->name('welcome');
 
 Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
+    Route::middleware(['auth'])->get('/dashboard', function () {
+        $users = User::latest()->get();
+
+        return view('admin.dashboard', compact('users'));
     })->name('admin.dashboard');
 });
 
