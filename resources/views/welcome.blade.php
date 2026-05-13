@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Welcome</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -47,9 +47,6 @@
         <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
             Nhóm 1:
         </h2>
-        <h3 class="text-4xl md:text-3xl font-bold leading-tight mb-4">
-            Chủ đề: <span class="text-indigo-600 dark:text-indigo-400">Xây dựng mô hình mạng ảo và triển khai dịch vụ DNS/DHCP, Web Server trên Windows Server và Ubuntu Server; so sánh, đánh giá và demo quản trị hệ thống</span>
-        </h3>
     </section>
 
     <!-- Carousel -->
@@ -61,32 +58,19 @@
             data-carousel="static">
 
             <!-- Slides -->
-            <div class="relative h-64 md:h-[500px]">
+            <div class="relative h-64 md:h-[600px]">
 
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="https://cdn-media.sforum.vn/storage/app/media/anh-dep-8.jpg"
+                    <img src="{{ asset('images/img_team.png') }}"
                         class="slide-image absolute block w-full h-full object-cover cursor-pointer"
-                        alt="">
+                        alt="Nhóm 1">
                 </div>
 
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://picsum.photos/1200/600?1"
+                    <img src="{{ asset('images/img_topic.png') }}"
                         class="slide-image absolute block w-full h-full object-cover cursor-pointer"
                         alt="">
                 </div>
-
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://picsum.photos/1200/600?2"
-                        class="slide-image absolute block w-full h-full object-cover cursor-pointer"
-                        alt="">
-                </div>
-
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://picsum.photos/1200/600?3"
-                        class="slide-image absolute block w-full h-full object-cover cursor-pointer"
-                        alt="">
-                </div>
-
             </div>
 
             <!-- Overlay -->
